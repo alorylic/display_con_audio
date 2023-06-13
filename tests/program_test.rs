@@ -1,9 +1,9 @@
-use DisplayConAudio::impls;
-use windows_sys::Win32::UI::WindowsAndMessaging::{GetWindowTextLengthW, GetWindowTextW};
+use DisplayConAudio::prelude::*;
+use windows_sys::Win32::{UI::WindowsAndMessaging::{GetWindowTextLengthW, GetWindowTextW}, Graphics::Gdi::EnumDisplayDevicesW};
 
 #[test]
 fn program() {
-    let programs = impls::get_all_windows_program_hwdn();
+    let programs = get_all_windows_program_hwdn();
     let mut names = vec![];
     unsafe {
         for program in programs {
@@ -18,6 +18,6 @@ fn program() {
 
 #[test]
 fn display() {
-    let displays = impls::get_all_display();
+    let displays = get_all_display();
     println!("{}", displays.len())
 }
