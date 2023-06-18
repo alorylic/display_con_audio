@@ -1,5 +1,5 @@
 [package]
-name = "DisplayConAudio"
+name = "display_con_audio"
 version = "0.1.0"
 edition = "2021"
 

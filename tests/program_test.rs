@@ -1,8 +1,7 @@
 use windows_sys::Win32::{
-    Graphics::Gdi::EnumDisplayDevicesW,
     UI::WindowsAndMessaging::{GetWindowTextLengthW, GetWindowTextW},
 };
-use DisplayConAudio::prelude::*;
+use display_con_audio::prelude::*;
 
 #[test]
 fn program() {
